@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -69,8 +69,25 @@ nav ul li {
   background: linear-gradient(#FFFFFF, #d0cfd7);
 }
 
+.moveLeft, .moveRight {
+  width: 5%;
+  height: 504px;
+  float: left;
+  color: #26c5a9;
+  font-size: 70px;
+  font-weight: 100;
+  text-align: left;
+  box-sizing: border-box;
+  padding-top: 200px;
+}
+
+.moveRight {
+  float: right;
+  text-align: right;
+}
+
 .productPhoto {
-  width: 40%;
+  width: 35%;
   height: 504px;
   float: left;
   background-image: url("../images/black_chair.png");
@@ -80,7 +97,7 @@ nav ul li {
 }
 
 .mainCopyButton {
-  width: 60%;
+  width: 55%;
   float: right;
   margin-top: 125px;
 }
@@ -136,7 +153,6 @@ nav ul li {
 .box1, .box2, .boxText {
   width: 320px;
   height: 225px;
-  background-color: red;
   display: inline-block;
   float: left;
   position: relative;
@@ -153,7 +169,21 @@ nav ul li {
 }
 
 .boxText {
+  box-sizing: border-box;
   float: right;
+  height: 255px;
+  border: 1px solid lightGray;
+  padding: 18px 12px 12px 12px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.boxText p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 22px;
+  margin-top: 20px;
 }
 
 .boxTitleContainer {
@@ -172,4 +202,5 @@ hr {
   width: 155px;
   background-color: #26c5a9;
   border: none;
+  margin-top: 3px;
 }
