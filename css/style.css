@@ -32,13 +32,13 @@ header {
   font-weight: 700;
 }
 
-.menu {
+nav {
   width: 50%;
   float: right;
   padding-top: 15px;
 }
 
-.menu li {
+nav li {
   color: white;
   font-size: 10px;
   font-weight: 700;
