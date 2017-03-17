@@ -8,8 +8,14 @@
 }
 
 .container {
-  width: 1054px;
+  width: 1000px;
   margin: 0 auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 header {
@@ -38,14 +44,80 @@ nav {
   padding-top: 15px;
 }
 
-nav li {
+nav ul li {
+  float: right;
   color: white;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   display: inline;
   list-style: none;
-  float: right;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+#slider {
+  height: 504px;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#FFFFFF, #d0cfd7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFFFFF, #d0cfd7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFFFFF, #d0cfd7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FFFFFF, #d0cfd7);
+}
+
+.productPhoto {
+  width: 40%;
+  height: 504px;
+  float: left;
+  background-image: url("../images/black_chair.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.mainCopyButton {
+  width: 60%;
+  height: 504px;
+  float: right;
+  margin-top: 125px;
+}
+
+.mainCopyButton p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 30px;
+}
+
+.claim {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.claim span {
+  font-size: 40px;
+  font-weight: 700;
+  color: #26c5a9;
+  text-transform: uppercase;
+}
+
+.button {
+  width: 262px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #26c5a9;
+  border-radius: 10px;
+}
+
+.button span {
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  display: table-cell;
+  width: inherit;
+  text-align: center;
+  padding-top: 11px;
 }
