@@ -171,7 +171,6 @@ nav ul li {
 .boxText {
   box-sizing: border-box;
   float: right;
-  height: 255px;
   border: 1px solid lightGray;
   padding: 18px 12px 12px 12px;
   margin: 0;
@@ -203,4 +202,87 @@ hr {
   background-color: #26c5a9;
   border: none;
   margin-top: 3px;
+}
+
+/* PRICETAG */
+
+#priceSection {
+  background-color: #f1f1f1;
+  height: 724px;
+}
+
+.circleBigger {
+  width: 52px;
+  height: 52px;
+  border: 2px solid lightGray;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -26px;
+  left: 134px;
+}
+
+.circleSmaller {
+  width: 50%;
+  height: 50%;
+  background-color: lightGray;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+  left: 12px;
+}
+
+.priceTag {
+  height: 500px;
+  width: 320px;
+  background-color: #f9f9f9;
+  border: 2px solid lightGray;
+}
+
+.priceTag span {
+  color: #26c5a9;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+}
+
+.priceCircle {
+  width: 128px;
+  height: 128px;
+  border: 2px solid lightGray;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  left: 96px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.priceCircle span {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #bfbfbf;
+}
+
+span.pln {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bfbfbf;
+  padding-top: 7px;
+  margin-top: 0;
+}
+
+.priceTag li {
+  list-style: none;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #8d8d8d;
+  background-color: #e4e4e4;
+}
+
+.priceTag li:nth-child(2) {
+  background-color: #f1f1f1;
 }
