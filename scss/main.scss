@@ -224,7 +224,7 @@ button {
   }
 }
 
-/* PRICE TAG 1 */
+/* PRICE TAG */
 
 #priceSection {
   width: 100vw;
@@ -322,6 +322,9 @@ button {
     font-weight: bold;
     line-height: 2.4rem;
     margin-top: 0;
+    sup {
+      font-size: 2.2rem;
+    }
     .pln {
       font-size: 1.6rem;
       text-transform: uppercase;
@@ -488,3 +491,67 @@ form {
   height: 200px;
   width: 100%;
 }
+
+/* FOOTER */
+
+ footer {
+   height: 120px;
+   .container {
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+     //justify-content: space-between;
+     align-items: center;
+      .filler {
+        flex-grow: 1;
+      }
+      .logo {
+       font-size: 1.6rem;
+       color: map-get($colors, DarkGray);
+       text-transform: uppercase;
+       margin-left: 70px;
+        span {
+          font-size: 1.6rem;
+          font-weight: bold;
+       }
+     }
+   }
+ }
+
+ .copyright {
+   font-size: 1.6rem;
+   color: map-get($colors, DarkGray);
+ }
+
+ .socialMedia {
+    div {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-image: url('../images/flickr.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      &:nth-child(2) {
+        background-image: url('../images/vimeo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      &:nth-child(3) {
+        background-image: url('../images/pinterest.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      &:nth-child(4) {
+        background-image: url('../images/twitter.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+ }
