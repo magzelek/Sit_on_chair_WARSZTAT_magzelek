@@ -3,42 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Sit on Chair</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- slash z przodu przed sciezka jest konkretniejszym adresem, tak jest lepiej -->
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-  <header>
-    <div class="container">
+  <nav>
+    <div class="container row">
       <div class="logo">
         sit <span>on</span> chair
       </div>
-      <nav>
-        <ul>
-          <li id="lastMenuPosition">Galeria</li>
-          <li>Kontakt</li>
-          <li>O firmie</li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="#">O firmie</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <section id="slider">
     <div class="container row">
-      <div class="moveLeft">&lt;</div>
+      <div class="moveLeft"><a href="">&lt;</a></div>
       <div class="productPhoto"></div>
-      <div class="moveRight">&gt;</div>
       <div class="mainCopyButton">
         <div class="claim row">
           sit <span>on</span> our <span>chair</span>
         </div>
         <p class="row">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>Vivamus pharetra orci lobortis, venenatis felis eu, imperdiet eros.</br>Mauris sit amet scelerisque risus.</br>Vestibulum vitae ullamcorper tortor.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra orci lobortis, venenatis felis eu, imperdiet eros. Mauris sit amet scelerisque risus. Vestibulum vitae ullamcorper tortor.
         </p>
-        <div class="button row">
-          <span>zobacz więcej<span>
-        </div>
+        <button class="row">
+          <a href=""><span>zobacz więcej<span></a>
+        </button>
       </div>
+      <div class="moveRight"><a href="">&gt;</a></div>
     </div>
   </section>
 
@@ -46,21 +44,21 @@
     <div class="boxes container row">
       <div class="box1">
         <div class="boxTitleContainer">
-          Chair CLAIR</br>
-          <hr>
+          <a href="">Chair CLAIR</a>
+          <div class="underline"></div>
         </div>
       </div>
       <div class="box2">
         <div class="boxTitleContainer">
-          Chair MARGARITA</br>
-          <hr>
+          <a href="">Chair MARGARITA</a>
+          <div class="underline"></div>
         </div>
       </div>
       <div class="boxText">
-        Finds all inputs</br>
-        <hr>
+        <a href="">Finds all inputs</a>
+        <div class="underline"></div>
         <p>
-          Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</br>
+          Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</br></br>
           Notice there is no change when clicking the checkboxes since no click events have been
         </p>
       </div>
@@ -69,30 +67,68 @@
 
   <section id="priceSection">
     <div class="container row">
-      <div class="priceTag">
 
+      <div class="priceTag">
         <div class="circleBigger">
           <div class="circleSmaller"></div>
         </div>
-
         <span>BASIC PLAN</span>
-
         <div class="priceCircle">
           <span>
             85<sup>99</sup></br>
-            <span class="pln">PLN/MSC</span>
+            <span class="pln">pln/msc</span>
           </span>
         </div>
-
         <ul>
           <li>Zakup towaru + dowóz</li>
           <li>Serwis</li>
         </ul>
-
         <button>
           DOŁĄCZ
         </button>
+      </div>
 
+      <div class="priceTag middleTag">
+        <div class="circleBigger">
+          <div class="circleSmaller"></div>
+        </div>
+        <span>STANDARD PLAN</span>
+        <div class="priceCircle">
+          <span>
+            85<sup>99</sup></br>
+            <span class="pln">pln/msc</span>
+          </span>
+        </div>
+        <ul>
+          <li>Zakup towaru + dowóz</li>
+          <li>Serwis</li>
+          <li>Gwarancja 5 lat</li>
+        </ul>
+        <button>
+          DOŁĄCZ
+        </button>
+      </div>
+
+      <div class="priceTag">
+        <div class="circleBigger">
+          <div class="circleSmaller"></div>
+        </div>
+        <span>ADVANCE PLAN</span>
+        <div class="priceCircle">
+          <span>
+            211<sup>00</sup></br>
+            <span class="pln">pln/msc</span>
+          </span>
+        </div>
+        <ul>
+          <li>Zakup towaru + dowóz</li>
+          <li>Serwis</li>
+          <li>Gwarancja 6 lat</li>
+          <li>Porady projektanta</li>
+        </ul>
+        <button>
+          DOŁĄCZ
+        </button>
       </div>
 
     </div>
