@@ -245,7 +245,7 @@ button {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 74px;
 
   span {
     font-size: 2rem;
@@ -256,10 +256,12 @@ button {
   button {
     width: 120px;
     height: 34px;
-    color: map-get($colors, White);
-    font-size: 1.4rem;
     position: absolute;
     top: 415px;
+    a {
+      font-size: 1.4rem;
+      color: map-get($colors, White);
+    }
   }
 
   ul {
@@ -332,11 +334,6 @@ button {
 .middleTag {
   background-color: map-get($colors, Mint);
   border: 2px solid map-get($colors, Mint);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-top: 100px;
 
   .circleBigger {
     background-color: map-get($colors, Mint);
@@ -371,8 +368,123 @@ button {
   }
 
   button {
-    color: map-get($colors, Mint);
     background-color: map-get($colors, White);
+    a {
+      color: map-get($colors, Mint);
+    }
   }
 
+}
+
+.sectionTitle {
+  margin-top: 50px;
+  font-size: 2rem;
+  color: map-get($colors, Black);
+  text-transform: uppercase;
+  .underline {
+    width: 280px;
+  }
+}
+
+/* KONTAKT */
+
+#contact {
+  height: 480px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  input {
+    height: 65px;
+    width: 100%;
+    font-size: 2.6rem;
+    font-weight: lighter;
+    padding-left: 20px;
+    margin-top: 28px;
+    border: 1px solid;
+    border-color: map-get($colors, Mint);
+
+    &[type=submit] {
+      width: 340px;
+      height: 72px;
+      font-size: 3.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: map-get($colors, White);
+      background-color: map-get($colors, Mint);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    &[type=checkbox] {
+      display: inline;
+      float: left;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      cursor: pointer;
+    }
+    &[type=checkbox]:before {
+      content:"";
+      height: 50px;
+      width: 50px;
+      border: 1px solid map-get($colors, Mint);
+      background-color: #FFF;
+      display:inline-block;
+      padding: 0;
+    }
+    &[type=checkbox]:checked:before {
+      background: url('../images/form_ok.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 50px;
+      width: 50px;
+      border: 1px solid map-get($colors, Mint);
+      display:inline-block;
+      padding: 0;
+    }
+    &[type="checkbox"]:focus{
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+  }
+  textarea {
+    width: 100%;
+    font-size: 2.6rem;
+    font-weight: lighter;
+    padding: 20px;
+    margin-top: 28px;
+    border: 1px solid;
+    border-color: map-get($colors, Mint);
+    resize: none;
+  }
+  label {
+    width: calc(100% - 70px);
+    padding-left: 20px;
+    margin-top: 32px;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: map-get($colors, DarkGray);
+    display: inline;
+    float: left;
+  }
+}
+
+.col1 {
+  width: 60%;
+}
+
+.col2 {
+  width: 340px;
+}
+
+.formPhoto {
+  background-image: url('../images/red_chair.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
 }
