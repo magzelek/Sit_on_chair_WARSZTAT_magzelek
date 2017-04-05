@@ -8,6 +8,14 @@ $colors: (Black:#000, Mint:#24ba9f, DarkGray:#c2c2c2, LightGray:#f1f1f1, White:#
   font-family: 'Raleway', sans-serif;
   font-size: 10px;
   box-sizing: border-box;
+
+  // wylaczenie zaznaczania tekstu na stronie
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .container {
@@ -166,7 +174,7 @@ nav {
         }
       }
       p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         padding: 0 15px;
       }
 
@@ -225,7 +233,7 @@ button {
       border: 1px solid map-get($colors, DarkGray);
 
       a {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: map-get($colors, Black);
       }
@@ -259,7 +267,7 @@ button {
 .boxText {
   padding: 16px 16px;
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem;
     margin-top: 16px;
   }
@@ -505,53 +513,6 @@ button {
   color: map-get($colors, DarkGray);
 }
 
-
-.checkbox {
-  position: relative;
-  padding: 30px 30px 30px 0;
-
-  input {
-    display: block;
-    opacity: 0;
-    height: 48px;
-    position: absolute;
-    width: 48px;
-    cursor: pointer;
-  }
-  label {
-    display: block;
-    padding-left: 65px;
-    position: relative;
-    font-size: 2.5rem;
-    font-weight: normal;
-    color: #cecece;
-    line-height: 120%;
-    padding-top: 10px;
-    cursor: pointer;
-  }
-}
-
-.checkbox label::before, .checkbox label::after {
-  border: 1px solid #27c7ab;
-  content: "";
-  display: block;
-  left: 0;
-  height: 48px;
-  position: absolute;
-  width: 48px;
-  top: 0;
-}
-.checkbox label::after {
-  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
-  border: 0;
-  display: none;
-}
-
-.checkbox input:checked + label::after {
-  display: block;
-}
-
-
 .active {
   background: url('../images/form_ok.jpg');
   width: 48px;
@@ -662,7 +623,7 @@ button {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 15px solid map-get($colors, Mint);
-  display: block;
+  display:block;
   position: absolute;
   right: 12px;
   top: 12px;
@@ -722,39 +683,48 @@ form {
       border-radius: 10px;
       cursor: pointer;
     }
-    &[type=checkbox] {
-      display: inline;
-      float: left;
-      width: 50px;
-      height: 50px;
-      padding: 0;
-      cursor: pointer;
-    }
-    &[type=checkbox]:before {
-      content:"";
-      height: 50px;
-      width: 50px;
-      border: 1px solid map-get($colors, Mint);
-      background-color: #FFF;
-      display:inline-block;
-      padding: 0;
-    }
-    &[type=checkbox]:checked:before {
-      background: url('../images/form_ok.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 50px;
-      width: 50px;
-      border: 1px solid map-get($colors, Mint);
-      display:inline-block;
-      padding: 0;
-    }
-    &[type="checkbox"]:focus{
-      outline: none;
-      box-shadow: none;
-      border: none;
-    }
   }
+}
+
+input {
+  &[type=checkbox] {
+    display: inline;
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+  }
+  &[type=checkbox]:before {
+    content:"";
+    height: 50px;
+    width: 50px;
+    border: 1px solid map-get($colors, Mint);
+    background-color: #FFF;
+    display:inline-block;
+    padding: 0;
+  }
+  &[type=checkbox]:checked:before {
+    background: url('../images/form_ok.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid map-get($colors, Mint);
+    display:inline-block;
+    padding: 0;
+  }
+  &[type="checkbox"]:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.form input {
+  margin-top: 28px;
+}
+
   textarea {
     width: 100%;
     font-size: 2.6rem;
@@ -768,13 +738,17 @@ form {
   label {
     width: calc(100% - 70px);
     padding-left: 20px;
-    margin-top: 32px;
+    margin-top: 23px;
     font-size: 1.8rem;
-    font-weight: lighter;
+    font-weight: normal;
     color: map-get($colors, DarkGray);
     display: inline;
     float: left;
   }
+
+.form label {
+  margin-top: 38px;
+  font-size: 2.5rem;
 }
 
 .col1 {
@@ -866,7 +840,6 @@ form {
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 30px;
   left: calc(100% - 100px);
   visibility: hidden;
 
@@ -881,7 +854,6 @@ form {
     }
     a {
       color: white;
-      //display: block;
       width: 140px;
       text-decoration: none;
       padding-left: 0.7rem;
@@ -889,11 +861,15 @@ form {
   }
  }
 
+ #oFirmie {
+   width: 100%;
+   height: 100%;
+ }
+
  .triangleHolder {
    width: 160px;
-   height: 15px;
    margin: 0 20px;
-   //background-color: yellow;
+   padding-top: 15px;
  }
 
  .triangle {

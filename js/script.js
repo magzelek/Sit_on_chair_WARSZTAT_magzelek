@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   next.addEventListener('click', sliderNext);
   prev.addEventListener('click', sliderPrev);
 
+
 //zadanie4
 var rodzaj = document.getElementsByClassName('drop_down_list')[0].getElementsByClassName('list_arrow')[0];
 var kolor = document.getElementsByClassName('drop_down_list')[1].getElementsByClassName('list_arrow')[0];
@@ -84,8 +85,10 @@ function sumFinal() {
   var cena1 = Number(document.getElementsByClassName('title value')[0].innerHTML);
   var cena2 = Number(document.getElementsByClassName('color value')[0].innerHTML);
   var cena3 = Number(document.getElementsByClassName('pattern value')[0].innerHTML);
+  var cena4 = Number(document.getElementsByClassName('transport value')[0].innerHTML);
+
   var priceSum = 0;
-  priceSum = cena1+cena2+cena3;
+  priceSum = cena1+cena2+cena3+cena4;
   document.getElementsByClassName('sum')[0].innerHTML=priceSum+" zł";
 }
 
@@ -158,9 +161,6 @@ function sumFinal() {
     document.getElementsByClassName('pattern value')[0].innerHTML=200;
     sumFinal();
   } );
-
-
-
 
 
 });

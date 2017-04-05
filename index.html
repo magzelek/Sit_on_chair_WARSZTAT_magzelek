@@ -6,10 +6,45 @@
   <link rel="stylesheet" href="css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<script type="text/javascript">
+
+// skrypt do checkboxa
+
+function sumFinal() {
+  var cena1 = Number(document.getElementsByClassName('title value')[0].innerHTML);
+  var cena2 = Number(document.getElementsByClassName('color value')[0].innerHTML);
+  var cena3 = Number(document.getElementsByClassName('pattern value')[0].innerHTML);
+  var cena4 = Number(document.getElementsByClassName('transport value')[0].innerHTML);
+
+  var priceSum = 0;
+  priceSum = cena1+cena2+cena3+cena4;
+  document.getElementsByClassName('sum')[0].innerHTML=priceSum+" zł";
+}
+
+var checkboxElem = document.getElementById('transport');
+
+function checkboxTransport(checkboxElem) {
+  if (checkboxElem.checked) {
+    document.getElementsByClassName('transport')[0].innerHTML="Transport";
+    document.getElementsByClassName('transport value')[0].innerHTML=200;
+    //console.log('checked');
+  } else {
+    document.getElementsByClassName('transport')[0].innerHTML="";
+    document.getElementsByClassName('transport value')[0].innerHTML="";
+    //console.log('unchecked');
+  }
+  sumFinal();
+}
+
+// skrypt do checkboxa KONIEC
+
+</script>
+
 <body>
 
   <nav>
-    <div class="container row">
+    <div class="container">
       <div class="logo">
         sit <span>on</span> chair
       </div>
@@ -34,7 +69,7 @@
   </nav>
 
   <section id="slider">
-    <div class="container row">
+    <div class="container">
       <div class="moveLeft">&lt;</div>
       <ul class="productPhoto">
         <li><div class="" id="photo1"></div></li>
@@ -42,13 +77,13 @@
         <li><div class="" id="photo3"></div></li>
       </ul>
       <div class="mainCopyButton">
-        <div class="claim row">
+        <div class="claim">
           sit <span>on</span> our <span>chair</span>
         </div>
-        <p class="row">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra orci lobortis, venenatis felis eu, imperdiet eros. Mauris sit amet scelerisque risus. Vestibulum vitae ullamcorper tortor.
         </p>
-        <button class="row">
+        <button>
           <a href=""><span>zobacz więcej<span></a>
         </button>
       </div>
@@ -57,7 +92,7 @@
   </section>
 
   <section id="productBoxes">
-    <div class="boxes container row">
+    <div class="boxes container">
       <div class="box box1">
         <div class="boxTitleContainer">
           <a href="">Chair CLAIR</a>
@@ -74,7 +109,7 @@
         <a href="">Finds all inputs</a>
         <div class="underline"></div>
         <p>
-          Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</br></br>
+          Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking.</br></br>
           Notice there is no change when clicking the checkboxes since no click events have been
         </p>
       </div>
@@ -83,14 +118,14 @@
 
   <section id="priceSection">
 
-    <div class="container row">
+    <div class="container">
       <div class="sectionTitle">
         cennik
         <div class="underline"></div>
       </div>
     </div>
 
-    <div class="container row">
+    <div class="container">
 
       <div class="priceTag">
         <div class="circleBigger">
@@ -193,12 +228,8 @@
                           <li>Skóra</li>
                       </ul>
                   </div>
-                  <div class="checkbox check-box">
-                      <input type="checkbox" id="transport" data-transport-price="200">
-                      <label for="transport">Transport</label>
-                  </div>
-                  <!--<div class="checkbox"></div>-->
-                  <!--<span class="list_label inline_text">Transport</span>-->
+                  <input type="checkbox" name="transport" id="transport" onclick="checkboxTransport(this);"/>
+                  <label for="transport">Transport</label>
               </div>
           </section>
 
@@ -236,7 +267,7 @@
   </section>
 
   <section id="contact">
-    <div class="container row">
+    <div class="container">
 
       <div class="sectionTitle">
         kontakt
